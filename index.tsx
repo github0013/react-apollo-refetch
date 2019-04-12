@@ -22,7 +22,7 @@ const settingQuery = gql`
 `;
 const QueryElement = () => {
   return (
-    <Query query={settingQuery} fetchPolicy="no-cache">
+    <Query query={settingQuery} notifyOnNetworkStatusChange={true}>
       {({ data, loading, error, refetch }) => {
         if (loading || error) {
           return <div />;
