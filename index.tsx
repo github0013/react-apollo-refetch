@@ -32,9 +32,9 @@ const QueryElement = () => {
         return (
           <p>
             <button
-              onClick={() => {
+              onClick={async () => {
                 console.log("refetching...");
-                refetch();
+                await refetch();
                 console.log("done");
               }}
             >
